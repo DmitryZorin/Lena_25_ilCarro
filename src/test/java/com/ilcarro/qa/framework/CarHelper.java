@@ -18,7 +18,7 @@ public class CarHelper extends HelperBase{
     }
 
     public void fillAddCarForm(Car car) {
-        type(By.name("[name='country']"), car.getCountry());
+        type(By.cssSelector(".country"), car.getCountry());
         type(By.cssSelector(".address"), car.getAddress());
         type(By.cssSelector(".distance_included"), car.getDistance());
         type(By.cssSelector(".serial_number"), car.getSerialNumber());
@@ -35,7 +35,7 @@ public class CarHelper extends HelperBase{
         type(By.cssSelector(".doors"), car.getDoors());
         type(By.cssSelector(".seats"), car.getSeats());
         type(By.cssSelector(".class"), car.getClasss());
-        type(By.name("[name='about']"), car.getAbout());
+        type(By.name("about"), car.getAbout());
         type(By.cssSelector(".type_feature"), car.getFeture());
         type(By.cssSelector(".price"), car.getPrice());
     }

@@ -17,7 +17,8 @@ public class AddCarTests extends TestBase {
 
     @Test
     public void testFormLetTheCarWork() throws InterruptedException {
-        app.header().click(By.cssSelector(".let-carwork-style_let_car__location__30BIh"));
+        app.header().addCar();
+        // app.header().click(By.cssSelector(".let-carwork-style_let_car__location__30BIh"));
 
         app.car().fillAddCarForm(new Car()
                 .setCountry("Israel")

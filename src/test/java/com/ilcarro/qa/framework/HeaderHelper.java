@@ -18,4 +18,8 @@ public class HeaderHelper extends HelperBase {
     public void clickSignUp() {
         click(By.cssSelector("[href='/signup']"));
     }
+
+    public void addCar() {
+        click(By.cssSelector(".header__nav [href='/car']"));
+    }
 }

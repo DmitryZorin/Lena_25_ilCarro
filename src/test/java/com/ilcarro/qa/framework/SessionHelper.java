@@ -30,6 +30,7 @@ public class SessionHelper extends HelperBase {
         clickLoginTabOnHeader();
         fillLoginForm(new User().setEmail(email).setPassword(password));
         submitForm();
+        Thread.sleep(2000);
     }
 
     public void fillLoginForm(User user) {
