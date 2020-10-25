@@ -24,7 +24,7 @@ public class AddCarTests extends TestBase {
                 .setCountry("Israel")
                 .setAddress("Hrtzel 1")
                 .setDistance("500")
-                .setSerialNumber("876-111-211")
+                .setSerialNumber("654-111-211")
                 .setBrand("Honda")
                 .setModel("Civic")
                 .setYear("2015")

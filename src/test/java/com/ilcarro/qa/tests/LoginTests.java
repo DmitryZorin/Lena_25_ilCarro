@@ -20,12 +20,7 @@ public class LoginTests extends TestBase {
         //aa@bb110.com
         //fillLoginForm
         app.session().login("aa@bb109.com","1Aaaaaaaa");
-
-
-        //submit login
-        app.session().submitForm();
-
-
+        
         //Assert userLoggedIn
     }
 
