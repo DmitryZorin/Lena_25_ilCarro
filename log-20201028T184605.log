@@ -1,0 +1,12 @@
+18:46:36.275 [main] INFO  com.ilcarro.qa.tests.TestBase - Start test testSignUpFromDataProvider with data: [fName, lName, lName+2@gmail.com, 1234567Aa]
+18:46:52.531 [main] INFO  com.ilcarro.qa.tests.TestBase - LoginFormPresent. Actual result: falseexpected result is: true
+18:47:02.691 [main] INFO  com.ilcarro.qa.tests.TestBase - Stop test testSignUpFromDataProvider
+18:47:02.691 [main] INFO  com.ilcarro.qa.tests.TestBase - =============================
+18:47:02.694 [main] INFO  com.ilcarro.qa.tests.TestBase - Start test testSignUpFromDataProvider with data: [qq, ww, ww+2@gmail.com, 1234567Aa]
+18:47:17.578 [main] INFO  com.ilcarro.qa.tests.TestBase - LoginFormPresent. Actual result: falseexpected result is: true
+18:47:27.645 [main] INFO  com.ilcarro.qa.tests.TestBase - Stop test testSignUpFromDataProvider
+18:47:27.646 [main] INFO  com.ilcarro.qa.tests.TestBase - =============================
+18:47:27.648 [main] INFO  com.ilcarro.qa.tests.TestBase - Start test testSignUpFromDataProvider with data: [22, 44, 22_44+2@gmail.com, 1234567Aa]
+18:47:32.978 [main] INFO  com.ilcarro.qa.tests.TestBase - LoginFormPresent. Actual result: trueexpected result is: true
+18:47:33.134 [main] INFO  com.ilcarro.qa.tests.TestBase - Stop test testSignUpFromDataProvider
+18:47:33.134 [main] INFO  com.ilcarro.qa.tests.TestBase - =============================
