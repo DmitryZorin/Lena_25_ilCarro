@@ -13,34 +13,10 @@ import java.util.List;
 
 public class CreateAccountTests extends TestBase {
     //preconditions: user shoud be logged out
-    @DataProvider
-    public Iterator<Object[]>validUser(){
-        List<Object[]> list = new ArrayList<>();
-        list.add(new Object[]{"fName", "lName", "lName+2@gmail.com", "1234567Aa"});
-        list.add(new Object[]{"qq", "ww", "ww+2@gmail.com", "1234567Aa"});
-        list.add(new Object[]{"22", "44", "22_44+2@gmail.com", "1234567Aa"});
 
 
-        return list.iterator();
-    }
-
-    @DataProvider
-    public Iterator<Object[]> validUserFromCSV() throws IOException {
-        List<Object[]> list = new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new FileReader(
-                new File("src/test/resources/tests-newUser.csv")));
-        String line = reader.readLine();
-
-        while(line != null){
-            String[] split = line.split(",");
-            list.add(new Object[]{new User().setfName(split[0]).
-                    setlName(split[1]).setEmail(split[2]).setPassword(split[3])});
-            line = reader.readLine();
-        }
 
 
-        return list.iterator();
-    }
 
     @BeforeMethod
     public void ensurePreconditions() {
@@ -65,7 +41,7 @@ public class CreateAccountTests extends TestBase {
         Assert.assertTrue(app.session().isLoginFormPresent());
     }
 
-    @Test(dataProvider = "validUser")
+    @Test(dataProvider = "validUser", dataProviderClass = DataProvider.class)
     public void testSignUpFromDataProvider(String fName, String lName,
                                            String email, String password) throws InterruptedException {
         app.header().clickSignUp();
@@ -85,7 +61,7 @@ public class CreateAccountTests extends TestBase {
                 ". Expected result is: true");
         Assert.assertTrue(app.session().isLoginFormPresent());
 
-    }@Test(dataProvider = "validUserFromCSV")
+    }@Test(dataProvider = "validUserFromCSV", dataProviderClass = DataProvider.class)
     public void testSignUpFromCSVDataProvider(User user) throws InterruptedException {
         app.header().clickSignUp();
         app.session().fillRegistrationForm(user);

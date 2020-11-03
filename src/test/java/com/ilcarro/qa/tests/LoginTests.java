@@ -1,5 +1,6 @@
 package com.ilcarro.qa.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -21,7 +22,7 @@ public class LoginTests extends TestBase {
         //fillLoginForm
         app.session().login("aa@bb109.com","1Aaaaaaaa");
 
-        //Assert userLoggedIn
+        Assert.assertTrue(app.session().isUserLoggedIn());
     }
 
 }

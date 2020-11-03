@@ -3,6 +3,7 @@ package com.ilcarro.qa.tests;
 import com.ilcarro.qa.model.Car;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class AddCarTests extends TestBase {
@@ -10,7 +11,7 @@ public class AddCarTests extends TestBase {
     public void ensurePreconditions() throws InterruptedException {
 
         if (!app.session().isUserLoggedIn()) {
-            app.session().login("aa@bb109.com", "1Aaaaaaaa");
+            app.session().login("testerZXC+1@zxc.com", "1234567Aa");
         }
 
     }
@@ -41,6 +42,14 @@ public class AddCarTests extends TestBase {
                 .setAbout("Very good car")
                 .setFeature("new one, non smoking, navigator, baby chair")
                 .setPrice("55"));
+        app.car().submitForm();
+    }
+
+    @Test(dataProvider = "validCarFromCSV", dataProviderClass = DataProvider.class)
+    public void testFormLetTheCarWorkFromCSV(Car car) throws InterruptedException {
+        app.header().addCar();
+        // app.header().click(By.cssSelector(".let-carwork-style_let_car__location__30BIh"));
+        app.car().fillAddCarForm(car);
         app.car().submitForm();
     }
 

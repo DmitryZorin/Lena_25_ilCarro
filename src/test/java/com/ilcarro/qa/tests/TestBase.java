@@ -4,6 +4,7 @@ import com.ilcarro.qa.framework.ApplicationManager;
 import org.openqa.selenium.remote.BrowserType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
@@ -25,9 +26,18 @@ Logger logger = LoggerFactory.getLogger(TestBase.class);
                 " with data: " + Arrays.asList(p));
     }
 
-    @AfterMethod
-    public void stopTest(Method m){
-        logger.info("Stop test " + m.getName());
+
+    @AfterMethod(alwaysRun = true)
+    public void stopTest(ITestResult result){
+        if(result.isSuccess()){
+            logger.info("PASSED: Test method " + result.getMethod().getMethodName());
+        } else {
+            logger.error("FAILED:  Test method " + result.getMethod().getMethodName() +"\n" +
+                    "Screenshot: " + app.session().takeScreenshot());
+          //  logger.info("Screenshot: " + app.session().takeScreenshot());
+
+        }
+        logger.info("Stop test");
         logger.info("=============================");
     }
 
