@@ -13,7 +13,6 @@ import java.util.Iterator;
 import java.util.List;
 
 public class DataProviders {
-
     @DataProvider
     public Iterator<Object[]> validUser(){
         List<Object[]> list = new ArrayList<>();
@@ -50,7 +49,7 @@ public class DataProviders {
                 new File("src/test/resources/addCar.csv")));
         String line = reader.readLine();
 
-        while (line != null) {
+        while (line != null){
             String[] split = line.split(",");
             list.add(new Object[]{new Car()
                     .setCountry(split[0])
@@ -73,10 +72,10 @@ public class DataProviders {
                     .setAbout(split[17])
                     .setFeature(split[18])
                     .setPrice(split[19])});
+
             line = reader.readLine();
-
-
         }
+
         return list.iterator();
     }
 
