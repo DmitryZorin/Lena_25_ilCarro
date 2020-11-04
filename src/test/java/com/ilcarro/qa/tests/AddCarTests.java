@@ -45,7 +45,7 @@ public class AddCarTests extends TestBase {
         app.car().submitForm();
     }
 
-    @Test(dataProvider = "validCarFromCSV", dataProviderClass = DataProvider.class)
+    @Test(dataProvider = "validCarFromCSV", dataProviderClass = DataProviders.class)
     public void testFormLetTheCarWorkFromCSV(Car car) throws InterruptedException {
         app.header().addCar();
         // app.header().click(By.cssSelector(".let-carwork-style_let_car__location__30BIh"));

@@ -1,4 +1,4 @@
-package com.ilcarro.qa;
+package com.ilcarro.qa.tests;
 
 import com.ilcarro.qa.model.Car;
 import com.ilcarro.qa.model.User;
