@@ -41,7 +41,7 @@ public class CreateAccountTests extends TestBase {
         Assert.assertTrue(app.session().isLoginFormPresent());
     }
 
-    @Test(dataProvider = "validUser", dataProviderClass = DataProviders.class)
+    @Test(enabled = false, dataProvider = "validUser", dataProviderClass = DataProviders.class)
     public void testSignUpFromDataProvider(String fName, String lName,
                                            String email, String password) throws InterruptedException {
         app.header().clickSignUp();
@@ -61,7 +61,7 @@ public class CreateAccountTests extends TestBase {
                 ". Expected result is: true");
         Assert.assertTrue(app.session().isLoginFormPresent());
 
-    }@Test(dataProvider = "validUserFromCSV", dataProviderClass = DataProviders.class)
+    }@Test(enabled = false, dataProvider = "validUserFromCSV", dataProviderClass = DataProviders.class)
     public void testSignUpFromCSVDataProvider(User user) throws InterruptedException {
         app.header().clickSignUp();
         app.session().fillRegistrationForm(user);
