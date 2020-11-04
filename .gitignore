@@ -16,4 +16,4 @@ gradle-app.setting
 
 *.png
 *.log
-*.log
+//*.log
