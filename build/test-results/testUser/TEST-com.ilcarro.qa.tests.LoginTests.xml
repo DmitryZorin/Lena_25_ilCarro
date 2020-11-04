@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ilcarro.qa.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-25T18:13:48" hostname="DESKTOP-TFDCNJU" time="9.523">
+  <properties/>
+  <testcase name="loginRegisteredUserPositiveTest" classname="com.ilcarro.qa.tests.LoginTests" time="9.523"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

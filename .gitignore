@@ -1,5 +1,8 @@
 .gradle
-/build/
+/build/classes/
+/build/generated/
+/build/resourses/
+/build/reports/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -13,6 +16,7 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 *.log
+
 *.png
 *.log
 *.log
