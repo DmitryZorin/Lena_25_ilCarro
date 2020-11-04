@@ -1,8 +1,5 @@
 .gradle
-/build/classes/
-/build/generated/
-/build/resourses/
-/build/reports/
+#/build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
